@@ -265,6 +265,10 @@ public class RadarView extends View {
         xLocation = (int) (xLocation / sizePercent);
         yLocation = (int) (yLocation / sizePercent);
 
+        if(xLocation == 0 || yLocation == 0) {
+            return;
+        }
+
         Bitmap bitmap;
         Rect srcRect;
         Rect destRect = new Rect();
