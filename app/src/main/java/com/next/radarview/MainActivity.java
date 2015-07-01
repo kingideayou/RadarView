@@ -1,5 +1,7 @@
 package com.next.radarview;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -30,7 +32,10 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_to_git) {
+            Uri gitUri = Uri.parse("https://github.com/kingideayou/RadarView");
+            Intent intent = new Intent(Intent.ACTION_VIEW, gitUri);
+            startActivity(intent);
             return true;
         }
 
